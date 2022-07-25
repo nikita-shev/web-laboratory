@@ -1,0 +1,113 @@
+//color
+$text: #363636
+$tab-color: #39acc3
+$content-color: #2b2b29
+
+.section-faq
+  padding: 60px 0
+
+.faq
+  &__title
+    @include style(30px, 30px, 400, $text)
+  &__faq-contact
+    @include style(25px, 18px, 300, $text)
+    padding: 44px 230px
+    border: 1px solid $tab-color
+    & a
+      @include style(0, 18px, 700, $tab-color)
+  &__remark
+    @include style(0, 14px, 300, rgba(43, 43, 41, 0.5))
+    text-align: left
+
+.accordion
+  &-item
+    &__title
+      margin-bottom: 25px
+      @include font(18px, 700)
+      color: $tab-color
+      & span
+        border-bottom: 1px dashed $tab-color
+      &:last-of-type
+        margin-bottom: 35px
+      &:hover
+        @media (min-width: 992px)
+          cursor: pointer
+
+    &__content
+      position: relative
+      display: none
+      margin-bottom: 30px
+      padding: 25px
+      @include font(16px, 300)
+      background: url('../images/faq.png') no-repeat center / 100% 100%
+      color: $content-color
+      &:before
+        content: ''
+        position: absolute
+        top: -20px
+        left: 20px
+        display: block
+        width: 0
+        height: 0
+        border: 10px solid transparent
+        border-left-color: #ebf8fb
+        transform: rotate(-90deg)
+
+    &--active
+      display: block
+
+@media (max-width: 1200px)
+  .faq
+    &__faq-contact
+      padding: 44px 150px
+
+@media (max-width: 992px)
+  .faq
+    &__faq-contact
+      padding: 30px
+
+  //.tab-1, .tab-2, .tab-3, .tab-4
+  //  &:hover
+  //    cursor: auto
+
+@media (max-width: 576px)
+  .faq
+    &__title
+      font-size: 26px
+    &__faq-contact
+      padding: 25px 40px
+      font-size: 14px
+      & a
+        font-size: 14px
+    &__remark
+      font-size: 12px
+
+  .accordion
+    &-item
+      &__title
+        margin-bottom: 20px
+        font-size: 16px
+        &:last-of-type
+          margin-bottom: 25px
+      &__content
+        margin-bottom: 20px
+        padding: 15px
+        font-size: 13px
+
+@media (max-width: 450px)
+  .faq
+    &__title
+      margin-bottom: 20px
+      font-size: 20px
+
+  .accordion
+    &-item
+      &__title
+        margin-bottom: 15px
+        font-size: 13px
+        &:last-of-type
+          margin-bottom: 20px
+
+@media (max-width: 320px)
+  .faq
+    padding: 0 20px

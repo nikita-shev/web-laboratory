@@ -1,0 +1,105 @@
+@import "vendor/normalize"
+
+*,  *:before, *:after
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Roboto', sans-serif
+
+h1, h2, h3, p
+  margin: 0
+
+.d-flex
+  display: flex
+
+.container
+  width: 1140px
+  margin: 0 auto
+
+.btn
+  border-radius: 25px
+  &:focus
+    outline: none
+  &:hover
+    cursor: pointer
+
+@mixin font($size, $weight)
+  font-size: $size
+  font-weight: $weight
+
+@mixin style($margin, $size, $weight, $color: #ffffff)
+  margin-bottom: $margin
+  @include font($size, $weight)
+  text-align: center
+  color: $color
+
+@mixin btn-start($btn-text, $btn-bg)
+    display: block
+    margin: 0 auto
+    padding: 21px 49px
+    @include font(16px, 500)
+    border: none
+    color: $btn-text
+    background: $btn-bg
+    transition: all 0.7s ease
+    &:hover
+      background: darken($btn-bg, 10)
+
+@mixin btn-hover-disabled($btn-bg)
+  background: $btn-bg
+  cursor: auto
+
+@import "templates/header"
+@import "templates/question"
+@import "templates/work"
+@import "templates/professions"
+@import "templates/course"
+@import "templates/skills"
+@import "templates/instruction"
+@import "templates/teachers"
+@import "templates/slider"
+@import "templates/students"
+@import "templates/guarantee"
+@import "templates/advantages"
+@import "templates/result"
+@import "templates/bonus"
+@import "templates/tariffs"
+@import "templates/faq"
+@import "templates/footer"
+@import "templates/modal"
+
+
+.btn-up
+  position: fixed
+  bottom: 15px
+  right: 15px
+  display: none
+  width: 40px
+  height: 40px
+  border: none
+  background: url('../images/icons/icons.svg#btn-up') no-repeat
+
+@media (max-width: 576px)
+  .btn-up
+    right: 10px
+    width: 30px
+    height: 30px
+
+@media (max-width: 320px)
+  .btn-up
+    right: 5px
+    bottom: 10px
+    width: 25px
+    height: 25px
+
+
+@mixin container($max-width, $width-container)
+  @media (max-width: $max-width)
+    .container
+      width: $width-container
+
+@include container(1200px, 960px)
+@include container(992px, 720px)
+@include container(768px, 540px)
+@include container(576px, 450px)
+@include container(450px, 320px)

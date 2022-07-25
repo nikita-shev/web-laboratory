@@ -1,0 +1,117 @@
+//color
+$bg-color: #ebf8fb
+$text: #363636
+$btn-text: #ffffff
+$btn-bg: #ec568d
+
+.section-instruction
+  padding: 60px 0
+  background: $bg-color
+
+.instruction
+  &__title
+    margin-bottom: 20px
+    @include font(30px, 400)
+    text-align: center
+    color: $text
+  &__subtitle
+    margin-bottom: 30px
+    @include font(24px, 300)
+    text-align: center
+    color: $text
+
+  &-wrap
+    align-items: center
+    &__instruction
+      margin-bottom: 35px
+    &__video
+      margin-right: 55px
+
+  &__btn
+    display: block
+    margin: 0 auto
+    padding: 21px 49px
+    @include font(16px, 500)
+    border: none
+    color: $btn-text
+    background: $btn-bg
+    transition: all 0.7s ease
+    &:hover
+      background: darken($btn-bg, 10)
+
+.list
+  list-style: url('../images/icon/check-list.png')
+  &__item
+    margin-bottom: 15px
+    @include font(16px, 300)
+    color: $text
+
+@media (max-width: 992px)
+  .video
+    &__player
+      max-width: 365px
+
+  .instruction
+    &__btn
+      &:hover
+        background: $btn-bg
+        cursor: auto
+
+  .list
+    &__item
+      margin-bottom: 10px
+
+@media (max-width: 768px)
+  .instruction
+    &-wrap
+      flex-direction: column
+      &__video
+        margin: 0 auto 30px
+      &__list
+        margin-left: 50px
+
+  .video
+    &__player
+      max-width: 440px
+
+@media (max-width: 576px)
+  .instruction
+    &__title
+      font-size: 26px
+    &__subtitle
+      font-size: 20px
+    &__btn
+      padding: 18px 30px
+      font-size: 14px
+
+  .video
+    &__player
+      max-width: 400px
+
+@media (max-width: 450px)
+  .instruction
+    &__title
+      font-size: 20px
+    &__subtitle
+      font-size: 16px
+    &__btn
+      padding: 16px 26px
+      font-size: 12px
+
+  .video
+    &__player
+      max-width: 320px
+
+  .list
+    &__item
+      font-size: 12px
+
+@media (max-width: 320px)
+  .instruction
+    &-wrap
+      &__list
+        margin-left: 30px
+
+  .video
+    &__player
+      max-width: 280px

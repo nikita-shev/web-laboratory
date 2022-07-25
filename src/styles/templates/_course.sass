@@ -1,0 +1,204 @@
+//color
+$text: #ffffff
+$btn-bg: #ec568d
+
+//@mixin style($margin, $size, $weight)
+//  margin-bottom: $margin
+//  @include font($size, $weight)
+//  text-align: center
+//  color: $text
+
+.section-course
+  background: url('../images/header-bg.jpg') no-repeat center / cover
+  &__course
+    padding: 60px 0
+
+.course
+  &__title
+    @include style(20px, 30px, 400)
+  &__subtitle
+    @include style(30px, 24px, 300)
+  &__technology
+    flex-wrap: wrap
+    max-width: 750px
+    padding: 45px 115px
+    margin: 0 auto 40px
+    border: 1px solid $text
+  &__bonus-text
+    @include style(20px, 24px, 300)
+  &__bonus
+    justify-content: space-between
+    margin-bottom: 40px
+  &__btn
+    display: block
+    margin: 0 auto
+    padding: 21px 49px
+    @include font(16px, 500)
+    border: none
+    color: $text
+    background: $btn-bg
+    transition: all 0.7s ease
+    &:hover
+      background: darken($btn-bg, 10)
+
+
+.technology__title
+  margin: 35px auto 0
+  @include font(21px, 300)
+  color: $text
+
+//@mixin technology-style
+//%technology
+//  &__title
+//    @include font(16px, 700)
+//    color: $text
+//  &__subtitle
+//    @include font(14px, 300)
+//    color: $text
+
+  //flex-direction: column
+  //align-items: center
+  //@extend %technology
+
+//.bootstrap
+//  @extend %technology
+
+.bootstrap
+  flex-direction: column
+  align-items: center
+  max-width: 235px
+  &__img
+    margin-bottom: 15px
+    height: 70px
+    object-fit: cover
+  &__title
+    @include font(16px, 700)
+    color: $text
+  &__subtitle
+    @include font(14px, 300)
+    color: $text
+
+.sass
+  flex-direction: column
+  align-items: center
+  max-width: 235px
+  &__img
+    margin-bottom: 15px
+    height: 70px
+    object-fit: cover
+  &__title
+    @include font(16px, 700)
+    color: $text
+  &__subtitle
+    @include font(14px, 300)
+    text-align: center
+    color: $text
+
+.html
+  flex-direction: column
+  align-items: center
+  max-width: 235px
+  &__img
+    margin-bottom: 15px
+    height: 70px
+    object-fit: cover
+  &__title
+    @include font(16px, 700)
+    color: $text
+  &__subtitle
+    @include font(14px, 300)
+    text-align: center
+    color: $text
+
+.css
+  flex-direction: column
+  align-items: center
+  max-width: 235px
+  &__img
+    margin-bottom: 15px
+    height: 70px
+    object-fit: cover
+  &__title
+    @include font(16px, 700)
+    color: $text
+  &__subtitle
+    @include font(14px, 300)
+    text-align: center
+    color: $text
+
+@media (max-width: 1200px)
+  .bootstrap, .sass, .html, .css
+    &__subtitle
+      font-size: 13px
+
+@media (max-width: 992px)
+  .course
+    &__technology
+      padding: 45px 100px
+    &__bonus
+      flex-wrap: wrap
+    &__btn
+      &:hover
+        background: $btn-bg
+        cursor: auto
+
+  .bonus
+    &__bootstrap, &__sass, &__html, &__css
+      flex-basis: 50%
+      max-width: 50%
+    &__bootstrap, &__sass
+      margin-bottom: 30px
+
+@media (max-width: 768px)
+  .course
+    &__technology
+      padding: 45px 54px
+
+@media (max-width: 576px)
+  .course
+    &__title
+      font-size: 26px
+    &__subtitle, &__bonus-text
+      font-size: 20px
+    &__technology
+      padding: 45px 24px
+    &__btn
+      padding: 18px 30px
+      font-size: 14px
+
+  .technology
+    &__title
+      font-size: 18px
+  .bonus
+    &__bootstrap, &__sass, &__html, &__css
+      flex-basis: 100%
+      max-width: 100%
+      margin-bottom: 30px
+    &__css
+      margin-bottom: 15px
+
+@media (max-width: 450px)
+  .course
+    &__title
+      font-size: 20px
+    &__subtitle, &__bonus-text
+      font-size: 16px
+    &__btn
+      padding: 16px 26px
+      font-size: 12px
+
+  .bootstrap, .sass, .html, .css
+    &__title
+      font-size: 14px
+    &__subtitle
+      font-size: 12px
+
+@media (max-width: 320px)
+  .course
+    &__technology
+      margin: 0 10px 40px
+      padding: 20px 14px
+
+  .technology
+    &__title
+      font-size: 14px

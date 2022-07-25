@@ -1,0 +1,117 @@
+//color
+$text: #363636
+$colorTitle: #3cb6ce
+
+.section-skills
+  padding: 60px 0
+
+.skills
+  &__title
+    margin-bottom: 35px
+    @include font(30px, 400)
+    text-align: center
+    color: $text
+  &__wrap-markup
+    margin-bottom: 40px
+  &-wrap
+    width: 360px
+    &__title
+      margin-bottom: 10px
+      @include font(18px, 700)
+      color: $colorTitle
+    &__learning
+      list-style: url('../images/icon/check-list.png')
+    &__item
+      margin-bottom: 20px
+      @include font(14px, 300)
+      color: $text
+
+  &-html, &-js
+    &__skills-wrap
+      margin-right: 30px
+
+
+.wrap-markup, .wrap-interactivity
+  & picture
+    margin-right: auto
+    object-fit: contain
+
+.wrap-interactivity
+  &__img
+    margin-left: 31px
+
+@media (max-width: 1200px)
+  .skills
+    &-wrap
+      max-width: 320px
+    &-html, &-js
+      &__skills-wrap
+        margin-right: 40px
+
+@media (max-width: 992px)
+  .skills
+    &-html, &-js
+      &__skills-wrap
+        margin-right: 0
+
+  .wrap-markup, .wrap-interactivity
+    flex-wrap: wrap
+    justify-content: space-around
+    & picture
+      flex-basis: 100%
+      margin-bottom: 30px
+      max-height: 155px
+      & img
+        display: block
+        margin: auto
+
+@media (max-width: 768px)
+  .skills
+    &-html, &-css, &-js, &-other
+      &__skills-wrap
+        margin-left: 30px
+        margin-bottom: 10px
+
+  .wrap-markup, .wrap-interactivity
+    flex-wrap: wrap
+    justify-content: center
+    &__img
+      margin: 0 auto 30px
+
+@media (max-width: 576px)
+  .skills
+    &__title
+      font-size: 26px
+    &-wrap
+      &__item
+        margin-bottom: 15px
+
+  .wrap
+    &-markup, &-interactivity
+      &__img
+        max-width: 150px
+
+@media (max-width: 450px)
+  .skills
+    &__title
+      font-size: 20px
+    &-wrap
+      &__title
+        font-size: 16px
+      &__item
+        margin-bottom: 10px
+        font-size: 12px
+
+  .wrap
+    &-markup, &-interactivity
+      &__img
+        max-width: 100px
+        margin: 0 auto 20px
+
+@media (max-width: 320px)
+  .skills
+    &-html, &-css, &-js, &-other
+      &__skills-wrap
+        margin-left: 40px
+        margin-right: 25px
+        margin-bottom: 10px

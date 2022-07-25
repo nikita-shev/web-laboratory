@@ -1,0 +1,126 @@
+//color
+$text: #363636
+
+.section-teachers
+  padding: 60px 0
+
+.teachers
+  &__title
+    margin-bottom: 10px
+    @include font(30px, 400)
+    text-align: center
+    color: $text
+  &__text
+    margin-bottom: 20px
+    @include font(24px, 300)
+    text-align: center
+    color: $text
+  &__teacher-wrap
+    margin-bottom: 50px
+  &__teacher-customers
+    margin: 0 auto
+
+.teacher
+  &-wrap
+    align-items: center
+    &__teacher-photo
+      margin-right: 100px
+    &__teacher-description
+      position: relative
+  &-description
+    &__name
+      margin-bottom: 20px
+      @include font(18px, 700)
+      color: $text
+    &__list
+      max-width: 600px
+      margin-left: 25px
+      &:before
+        content: url('../images/icon/quotes-left.png')
+        position: absolute
+        top: 0
+        left: -70px
+      &:after
+        content: url('../images/icon/quotes-right.png')
+        position: absolute
+        bottom: 0
+        right: -50px
+  &-customers
+    justify-content: space-between
+    align-items: center
+    max-width: 700px
+
+@media (max-width: 1200px)
+  .teacher
+    &-description
+      &__list
+        &:before
+          left: -60px
+        &:after
+          right: -15px
+          bottom: -25px
+
+@media (max-width: 992px)
+  .teachers
+    &__title
+      margin-bottom: 30px
+
+  .teacher
+    &-description
+      &__name
+        font-size: 17px
+    &-wrap
+      &__teacher-photo
+        margin-right: 70px
+    &-photo
+      &__img
+        max-width: 290px
+
+@media (max-width: 768px)
+  .teacher
+    &-wrap
+      flex-direction: column
+      &__teacher-photo
+        margin-right: 0
+        margin-bottom: 30px
+    &-description
+      &__list
+        max-width: 385px
+        &:after
+          right: -55px
+          bottom: 0
+
+@media (max-width: 576px)
+  .teachers
+    &__title
+      font-size: 26px
+    &__text
+      font-size: 20px
+    &__teacher-wrap
+      margin-bottom: 30px
+
+  .teacher
+    &-description
+      &__list
+        &:before, &:after
+          display: none
+      &__name
+        font-size: 18px
+
+@media (max-width: 450px)
+  .teachers
+    &__title
+      font-size: 20px
+    &__text
+      font-size: 16px
+
+  .teacher
+    &-photo
+      &__img
+        max-width: 200px
+    &-description
+      &__name
+        margin-bottom: 10px
+        font-size: 14px
+      &__list
+        max-width: 260px

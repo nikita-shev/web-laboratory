@@ -1,0 +1,171 @@
+//color
+$text: #363636
+$text-title: #3cb6ce
+
+$btn-text: #ffffff
+$btn-bg: #ec568d
+
+.section-bonus
+  padding: 60px 0
+
+.bonus
+  &__img
+    display: block
+    margin: 0 auto 20px
+  &__title
+    @include style(10px, 24px, 300, $text)
+  &__subtitle
+    @include style(40px, 26px, 700, $text-title)
+  &__webflow
+    margin-bottom: 50px
+  &__text
+    @include style(30px, 24px, 300, $text)
+  &__img-video
+    display: block
+    margin: 0 auto 25px
+  &__btn
+    @include btn-start($btn-text, $btn-bg)
+
+.price
+  &__start-webflow
+    margin-right: 25px
+  &__old-price
+    margin-top: 20px
+  &__list
+    max-width: 660px
+
+.webflow
+  justify-content: space-around
+
+.start-webflow, .advanced-webflow
+  text-transform: uppercase
+  @include style(0, 13px, 700, $text)
+  &__img
+    margin-bottom: 15px
+
+.old-price
+  text-decoration: line-through
+  @include style(0, 18px, 700, $text)
+
+.current-price
+  @include style(0, 28px, 700, $text-title)
+
+
+@media (max-width: 1200px)
+  .price__list
+    max-width: 50%
+
+@media (max-width: 992px)
+  .webflow
+    flex-direction: column
+    &__price
+      margin-bottom: 30px
+
+  .bonus
+    &__title
+      font-size: 22px
+    &__subtitle
+      font-size: 24px
+    &__btn
+      &:hover
+        background: $btn-bg
+        cursor: auto
+
+  .price
+    &__list
+      max-width: 75%
+      margin: 0 auto
+    &__start-webflow
+      margin-left: auto
+    &__advanced-webflow
+      margin-right: auto
+
+@media (max-width: 768px)
+  .bonus
+    &__title
+      font-size: 16px
+    &__subtitle
+      font-size: 18px
+
+@media (max-width: 576px)
+  .bonus
+    &__img
+      max-width: 100px
+    &__subtitle
+      font-size: 22px
+    &__text
+      font-size: 20px
+    &__img-video
+      max-width: 100%
+    &__btn
+      padding: 18px 30px
+      font-size: 14px
+
+  .start-webflow
+    &__img
+      max-width: 80px
+  .advanced-webflow
+    &__img
+      max-width: 80px
+
+  .old-price
+    font-size: 16px
+  .current-price
+    font-size: 24px
+
+  .price
+    &__list
+      max-width: 90%
+
+  .list
+    &__item
+      font-size: 14px
+
+@media (max-width: 450px)
+  .bonus
+    &__img
+      max-width: 90px
+    &__title
+      font-size: 11px
+    &__subtitle
+      margin-bottom: 30px
+      font-size: 15px
+    &__webflow
+      margin-bottom: 30px
+    &__text
+      margin-bottom: 20px
+      font-size: 16px
+    &__img-video
+      max-width: 90%
+    &__btn
+      padding: 16px 26px
+      font-size: 12px
+
+  .start-webflow, .advanced-webflow
+    &__title
+      font-size: 11px
+
+  .old-price
+    font-size: 14px
+  .current-price
+    font-size: 20px
+
+  .list
+    &__item
+      font-size: 12px
+
+  .price
+    &__list
+      max-width: 90%
+
+@media (max-width: 320px)
+  .start-webflow, .advanced-webflow
+    &__img
+      margin-bottom: 10px
+      max-width: 60px
+    &__title
+      font-size: 10px
+
+  .price
+    &__list
+      max-width: 70%

@@ -1,0 +1,120 @@
+//color
+$btn-text: #ffffff
+$btn-bg: #ec568d
+
+.section-students
+  padding: 70px 0
+  background: url('../images/header-bg.jpg') no-repeat center / cover
+
+.students
+  &__title
+    @include style(25px, 30px, 400)
+  &__all-students
+    margin-bottom: 45px
+  &__description
+    max-width: 1120px
+    margin: 0 auto
+    @include style(30px, 24px, 300)
+    line-height: 30px
+  &__btn
+    @include btn-start($btn-text, $btn-bg)
+
+.all-students
+  justify-content: space-between
+
+.student
+  flex-direction: column
+  align-items: center
+  max-width: 560px
+  &__img
+    max-width: 107px
+    margin-bottom: 15px
+  &__title
+    @include style(5px, 18px, 700)
+  &__description
+    max-width: 350px
+    @include style(15px, 14px, 300)
+    line-height: 22px
+  &__portfolio
+    max-width: 560px
+
+
+@media (max-width: 1200px)
+  .students
+    &__description
+      max-width: 820px
+
+  .student
+    max-width: 470px
+    &__portfolio
+      max-width: 470px
+
+@media (max-width: 992px)
+  .students
+    &__description
+      max-width: 570px
+    &__btn:hover
+      @include btn-hover-disabled($btn-bg)
+
+  .all-students
+    flex-direction: column
+    &__student
+      margin-bottom: 70px
+      &:last-of-type
+        margin-bottom: 0
+
+  .student
+    max-width: 100%
+    &__description
+      max-width: 515px
+    &__portfolio
+      max-width: 560px
+
+@media (max-width: 768px)
+  .students
+    &__description
+      max-width: 420px
+      font-size: 18px
+
+  .student
+    &__portfolio
+      max-width: 540px
+
+@media (max-width: 576px)
+  .section-students
+    padding: 60px 0
+
+  .students
+    &__title
+      font-size: 26px
+    &__description
+      line-height: 22px
+    &__btn
+      padding: 18px 30px
+      font-size: 14px
+
+  .student
+    &__portfolio
+      max-width: 450px
+
+@media (max-width: 450px)
+  .students
+    &__title
+      font-size: 20px
+    &__description
+      max-width: 290px
+      font-size: 14px
+    &__btn
+      padding: 16px 26px
+      font-size: 12px
+
+  .student
+    &__img
+      max-width: 87px
+    &__title
+      font-size: 14px
+    &__description
+      max-width: 300px
+      font-size: 12px
+    &__portfolio
+      max-width: 290px

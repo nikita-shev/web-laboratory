@@ -1,0 +1,134 @@
+//color
+$bg: #ebf8fb
+$text: #363636
+$textImportant : #3cb6ce
+
+.section-professions
+  background-color: $bg
+  &__professions
+    padding: 60px 0 70px 0
+
+.professions
+  &__title
+    margin-bottom: 20px
+    @include font(30px, 400)
+    text-align: center
+    color: $text
+  &__subtitle
+    max-width: 535px
+    margin: 0 auto 20px
+    @include font(24px, 300)
+    line-height: 30px
+    text-align: center
+    color: $text
+    & span
+      font-weight: 700
+      color: $textImportant
+
+.check-list
+  justify-content: space-around
+  &__start
+    &_big
+      position: relative
+
+.start
+  &__profession
+    max-width: 125px
+    margin-top: 15px
+    margin-left: 30px
+    @include font(18px, 300)
+    text-align: center
+    & span
+      font-weight: 700
+    &_big
+      position: absolute
+      bottom: 0
+      left: -20px
+      max-width: 210px
+  &__money
+    @include font(36px, 900)
+    color: $textImportant
+
+.skills-list
+  &__item
+    flex-direction: column
+    align-items: center
+    margin-bottom: 25px
+    &:last-of-type
+      margin-bottom: 0
+  &__img
+    margin-bottom: 10px
+  &__text
+    @include font(16px, 300)
+    color: $text
+
+@media (max-width: 992px)
+  .professions
+    &__subtitle
+      margin-bottom: 40px
+
+  .check-list
+    flex-direction: column
+    align-items: center
+    &__start
+      margin-left: 75px
+      margin-bottom: 40px
+      &_big
+        margin-left: 40px
+    &__skills-list
+      margin-bottom: 40px
+
+  .start
+    &__profession
+      &_big
+        bottom: -25px
+
+@media (max-width: 576px)
+  .section-professions
+    &__professions
+      padding: 50px 0
+
+  .professions
+    &__title
+      font-size: 26px
+    &__subtitle
+      font-size: 20px
+
+  .check-list
+    &__start
+      margin-left: 55px
+      &_big
+        margin-left: 25px
+
+  .start
+    &__img
+      max-width: 200px
+    &__profession
+      margin-left: 10px
+      font-size: 16px
+      &_big
+        left: 0
+        bottom: -35px
+    &__money
+      font-size: 24px
+
+@media (max-width: 450px)
+  .professions
+    &__title
+      font-size: 18px
+    &__subtitle
+      margin-bottom: 20px
+      font-size: 13px
+      line-height: 20px
+
+  .check-list
+    &__start
+      margin-bottom: 30px
+
+  .skills-list
+    &__item
+      margin-bottom: 20px
+    &__text
+      font-size: 12px
+    &__img
+      max-width: 30px

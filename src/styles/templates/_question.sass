@@ -1,0 +1,131 @@
+//color
+$bg: #ebf8fb
+$text: #363636
+
+.section-questions
+  background-color: $bg
+  &__questions
+    padding: 60px 0 70px 0
+
+.questions
+  &__title
+    margin-bottom: 50px
+    @include font(30px, 400)
+    text-align: center
+    color: $text
+  &__questions-list
+    margin-bottom: 50px
+  &-list
+    justify-content: space-between
+    &__item
+      align-items: flex-start
+      max-width: 340px
+    &__img
+      width: 40px
+      height: 40px
+    &__text
+      margin-left: 10px
+      @include font(16px, 300)
+      line-height: 22px
+      color: $text
+  &__subtext
+    margin: 0 auto
+    max-width: 575px
+    @include font(24px, 300)
+    text-align: center
+    line-height: 30px
+    color: $text
+    & span
+      @include font(30px, 400)
+
+@media (max-width: 1200px)
+  .questions
+    &-list
+      &__item
+        max-width: 310px
+      &__text
+        font-size: 14px
+
+@media (max-width: 992px)
+  .section-questions
+    &__questions
+      padding: 50px 0
+
+  .questions
+    &__title
+      margin-bottom: 40px
+    &-list
+      flex-direction: column
+      align-items: center
+      &__item
+        align-items: center
+        max-width: 450px
+        margin-bottom: 20px
+        &:nth-of-type(1)
+          margin-bottom: 11px
+          & img
+            margin-right: 14px
+        &:nth-of-type(n+2)
+          margin-left: 5px
+          & img
+            margin-right: 12px
+        &:last-of-type
+          margin-bottom: 0
+      &__text
+        margin-left: 0
+    &__questions-list
+      margin-bottom: 40px
+
+@media (max-width: 768px)
+  .questions
+    &__subtext
+      font-size: 22px
+
+@media (max-width: 576px)
+  .questions
+    &__title
+      font-size: 24px
+    &-list
+      &__img
+        max-width: 45px
+      &__item
+        max-width: 350px
+        &:nth-of-type(1)
+          margin-bottom: 16px
+      &__text
+        line-height: 20px
+    &__subtext
+      font-size: 18px
+      & span
+        display: inline-block
+        font-size: 24px
+
+@media (max-width: 450px)
+  .questions
+    &__title
+      font-size: 18px
+    &__subtext
+      font-size: 13px
+      line-height: 20px
+      & span
+        font-size: 16px
+
+@media (max-width: 320px)
+  .questions
+    &__title
+      margin-bottom: 25px
+      font-size: 16px
+    &-list
+      &__item
+        max-width: 268px
+        &:nth-of-type(n+2) img
+          margin-left: 2px
+        & img
+          margin-right: 10px
+      &__text
+        font-size: 12px
+        line-height: 18px
+    &__subtext
+      font-size: 12px
+      & span
+        font-size: 14px

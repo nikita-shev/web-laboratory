@@ -1,0 +1,99 @@
+//color
+$bg-color: #ebf8fb
+$title: #3cb6ce
+$text: #363636
+
+.section-guarantee
+  padding: 55px 0 70px
+  background: $bg-color
+
+.guarantee
+  &__img
+    display: block
+    max-width: 84px
+    margin: 0 auto 20px
+  &__title
+    @include style(5px, 26px, 700, $title)
+  &__subtitle
+    @include style(20px, 24px, 300, $text)
+
+  &-list
+    justify-content: space-between
+    max-width: 750px
+  &__guarantee-list
+    margin: 0 auto
+
+
+%icon
+  width: 56px
+  height: 56px
+  margin-bottom: 10px
+  object-fit: cover
+
+.training, .money
+  flex-direction: column
+  align-items: center
+  max-width: 360px
+  &__img
+    @extend %icon
+  &__text
+    text-align: center
+    line-height: 24px
+    @include font(16px, 300)
+
+
+@media (max-width: 992px)
+  .training, .money
+    max-width: 340px
+
+@media (max-width: 768px)
+  .guarantee
+    &__img
+      max-width: 64px
+    &__title
+      font-size: 19px
+    &__subtitle
+      margin-bottom: 40px
+      font-size: 16px
+
+    &-list
+      flex-direction: column
+      align-items: center
+      &__training
+        margin-bottom: 20px
+
+  .training, .money
+    max-width: 85%
+
+  .money__img
+    margin-left: 10px
+
+@media (max-width: 576px)
+  .section-guarantee
+    padding: 60px 0
+
+  .guarantee
+    &__title
+      font-size: 16px
+    &__subtitle
+      font-size: 14px
+
+  .training, .money
+    &__text
+      font-size: 14px
+      line-height: 20px
+
+@media (max-width: 450px)
+  .guarantee
+    &__title
+      font-size: 18px
+    &__subtitle
+      margin-bottom: 30px
+      font-size: 12px
+
+  .training, .money
+    &__img
+      margin-bottom: 5px
+    &__text
+      font-size: 12px
+      line-height: 18px

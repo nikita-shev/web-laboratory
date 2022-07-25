@@ -1,0 +1,219 @@
+//color
+$border : #ffffff
+$border-hover : #3EB6CE
+$text : #ffffff
+
+.header
+  background: url('../images/header-bg.jpg') no-repeat center / cover
+  &__nav-bar
+    padding: 22px 0 0
+  &__description
+    margin: 0 auto
+    padding: 60px 0
+
+.nav-bar
+  align-items: center
+  justify-content: space-between
+  &__btn
+    padding: 16px 27px
+    @include font(14px, 300)
+    border: 1px solid $border
+    background: transparent
+    color: $text
+    transition: all 0.7s ease
+    &:hover
+      border: 1px solid darken($border-hover, 5)
+      background: darken($border-hover, 5)
+
+.nav-menu
+  &__item
+    margin-right: 23px
+    padding: 0
+    list-style: none
+  &__link
+    padding: 2px 3px
+    @include font(13px, 400)
+    text-decoration: none
+    text-transform: uppercase
+    color: $text
+    background: transparent
+    transition: all 0.7s ease
+    &:hover
+      background: darken($border-hover, 5)
+    &:last-child
+      margin-right: 0
+
+.description
+  flex-direction: column
+  align-items: center
+  max-width: 780px
+  &__subtext
+    margin-bottom: 20px
+    @include font(30px, 300)
+    color: $text
+  &__title
+    margin-bottom: 15px
+    @include font(72px, 700)
+    color: $text
+  &__text-target
+    margin-bottom: 45px
+    @include font(30px, 300)
+    color: $text
+    & span
+      font-weight: 700
+  &__technology
+    margin-bottom: 50px
+  &__text-task
+    margin-bottom: 60px
+    @include font(18px, 300)
+    text-align: center
+    color: $text
+  &__btn
+    padding: 15px 20px 16px 21px
+    text-decoration: none
+    border: 1px solid #ffffff
+    background: transparent
+    color: $text
+    opacity: 0.5
+    transition: opacity 0.5s ease
+    &:hover
+      opacity: 1
+
+.technology
+  &-wrap
+    flex-direction: column
+    align-items: center
+    //отступ
+    &_mr
+      margin-right: 65px
+      &:nth-of-type(n+3)
+        margin-right: 0
+    &__img
+      margin-bottom: 15px
+    &__text
+      @include font(24px, 900)
+      color: $text
+
+@media (max-width: 1200px)
+  .nav-bar
+    &__btn
+      padding: 16px 20px
+      font-size: 12px
+
+  .logo
+    &__img
+      max-width: 150px
+
+  .nav-menu
+    &__item
+      margin-right: 18px
+    &__link
+      font-size: 12px
+
+@media (max-width: 992px)
+  .nav-menu
+    display: none
+
+  .nav-bar
+    &__btn
+      &:hover
+        border: 1px solid $border
+        background: transparent
+        cursor: auto
+
+  .description
+    &__subtext
+      font-size: 24px
+    &__title
+      font-size: 48px
+    &__text-target
+      font-size: 24px
+    &__btn
+      opacity: 1
+      &:hover
+        opacity: 1
+        cursor: auto
+
+@media (max-width: 768px)
+  .description
+    &__subtext
+      font-size: 20px
+    &__title
+      font-size: 40px
+    &__text-target
+      font-size: 20px
+    &__text-task
+      font-size: 16px
+
+  .technology-wrap
+    &__img
+      max-width: 100px
+
+@media (max-width: 576px)
+  .description
+    &__subtext
+      font-size: 16px
+    &__title
+      font-size: 32px
+    &__text-target
+      font-size: 16px
+    &__text-task
+      font-size: 14px
+
+  .technology-wrap
+    &__img
+      max-width: 100px
+    &_mr
+      margin-right: 50px
+
+@media (max-width: 450px)
+  .header
+    &__description
+      padding: 40px 0
+
+  .nav-bar
+    &__btn
+      font-size: 11px
+
+  .logo
+    &__img
+      max-width: 140px
+
+  .description
+    &__btn
+      padding: 13px 18px 14px 19px
+    &__subtext
+      font-size: 16px
+    &__title
+      font-size: 26px
+    &__text-target
+      margin-bottom: 35px
+      font-size: 13px
+    &__technology
+      margin-bottom: 35px
+    &__text-task
+      margin-bottom: 40px
+
+  .technology-wrap
+    &__img
+      max-width: 70px
+    &_mr
+      margin-right: 30px
+    &__text
+      font-size: 18px
+
+@media (max-width: 320px)
+  .nav-bar
+    &__logo
+      margin-left: 10px
+    &__btn
+      margin-right: 10px
+      padding: 14px 16px
+
+  .logo
+    &__img
+      max-width: 130px
+
+  .description
+    &__text-task
+      font-size: 13px

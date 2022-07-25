@@ -1,0 +1,110 @@
+//color
+$bg-color: #ebf8fb
+$text: #363636
+$btn-text: #ffffff
+$btn-bg: #ec568d
+
+.section-result
+  padding: 60px 0
+  background: $bg-color
+
+.result
+  &__title
+    @include style(20px, 30px, 400, $text)
+  &__subtitle
+    @include style(30px, 24px, 300, $text)
+  &__btn
+    @include btn-start($btn-text, $btn-bg)
+
+.all-result
+  flex-wrap: wrap
+  justify-content: space-between
+
+.project, .portfolio, .fl-work, .experience, .development, .progress-development
+  flex-direction: column
+  align-items: center
+  max-width: 32%
+  &__img
+    width: 50px
+    height: 50px
+    margin-bottom: 10px
+    object-fit: contain
+  &__text
+    @include style(50px, 16px, 300, $text)
+
+
+@media (max-width: 992px)
+  .result
+    &__btn:hover
+      @include btn-hover-disabled($btn-bg)
+
+  .project, .portfolio, .fl-work, .experience, .development, .progress-development
+    max-width: 45%
+
+@media (max-width: 768px)
+  .result
+    &__all-result
+      margin-bottom: 40px
+
+  .project, .portfolio, .fl-work, .experience, .development, .progress-development
+    flex-direction: row
+    max-width: 100%
+    &__img
+      margin-bottom: 0
+      margin-right: 15px
+    &__text
+      margin-bottom: 0
+      text-align: left
+
+  .all-result
+    &__project, &__portfolio, &__fl-work, &__experience, &__development
+      margin-bottom: 20px
+
+@media (max-width: 576px)
+  .result
+    &__title
+      font-size: 26px
+    &__subtitle
+      font-size: 20px
+    &__btn
+      padding: 18px 30px
+      font-size: 14px
+
+  .project, .portfolio, .fl-work, .experience, .development, .progress-development
+    &__text
+      font-size: 14px
+
+@media (max-width: 450px)
+  .result
+    &__title
+      font-size: 20px
+    &__subtitle
+      font-size: 16px
+    &__btn
+      padding: 16px 26px
+      font-size: 12px
+    &__all-result
+      margin-bottom: 30px
+
+  .project, .portfolio, .fl-work, .experience, .development, .progress-development
+    &__img
+      width: 40px
+      height: 40px
+    &__text
+      font-size: 12px
+
+  .all-result
+    &__project, &__portfolio, &__fl-work, &__experience, &__development
+      margin-bottom: 15px
+
+@media (max-width: 320px)
+  .result
+    &__all-result
+      margin: 0 auto 20px
+
+  .all-result
+    max-width: 290px
+
+  .project, .portfolio, .fl-work, .experience, .development, .progress-development
+    &__img
+      margin-right: 5px

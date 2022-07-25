@@ -1,0 +1,93 @@
+.slider-wrap
+  position: relative
+  width: 60%
+  margin: 0 auto
+
+.teacher-customers
+  overflow: hidden
+  &__img
+    margin: 0 15px 0 5px
+
+.btn-prev
+  position: absolute
+  left: -50px
+  top: 50%
+  align-items: center
+  justify-content: center
+  width: 44px
+  height: 44px
+  border-radius: 0
+  border: none
+  transform: translateY(-50%) rotate(180deg)
+  box-shadow: 0 0 10px 0 #a8a8a8
+  background: #ffffff
+  &__img
+    width: 10px
+    height: 10px
+
+.btn-next
+  position: absolute
+  right: -50px
+  top: 50%
+  align-items: center
+  justify-content: center
+  width: 44px
+  height: 44px
+  border-radius: 0
+  border: none
+  transform: translateY(-50%)
+  box-shadow: 0 0 10px 0 #a8a8a8
+  background: #ffffff
+  &__img
+    width: 10px
+    height: 10px
+
+@media (max-width: 1200px)
+  .slider-wrap
+    width: 70%
+
+@media (max-width: 992px)
+  .slider-wrap
+    width: 90%
+
+@media (max-width: 768px)
+  .slider-wrap
+    width: 100%
+
+  .teacher-customers
+    &__img
+      max-width: 270px
+      height: 102px
+      padding: 0 70px
+      margin: 0
+      object-fit: contain
+
+  .btn-prev
+    left: -22px
+
+  .btn-next
+    right: -22px
+
+@media (max-width: 576px)
+  .teacher-customers
+    &__img
+      max-width: 450px
+      padding: 0 155px
+
+  .btn-prev
+    left: 50px
+
+  .btn-next
+    right: 50px
+
+@media (max-width: 450px)
+  .teacher-customers
+    &__img
+      max-width: 320px
+      padding: 0 110px
+
+  .btn-prev
+    left: 20px
+
+  .btn-next
+    right: 20px

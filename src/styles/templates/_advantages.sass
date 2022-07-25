@@ -1,0 +1,121 @@
+//color
+$text: #363636
+
+.section-advantages
+  padding: 60px 0
+
+.advantages
+  &__title
+    @include style(40px, 30px, 400, $text)
+  &__all-advantages
+    margin-bottom: 50px
+  &__subtitle
+    @include style(35px, 24px, 300, $text)
+  &__img
+    display: block
+    margin: 0 auto
+
+.all-advantages
+  justify-content: space-between
+
+
+.communication, .homework, .time
+  align-items: center
+  max-width: 350px
+  &__img
+    width: 53px
+    height: 49px
+    margin-right: 10px
+    object-fit: cover
+  &__text
+    @include style(0, 16px, 300, $text)
+    line-height: 20px
+    text-align: left
+
+.time
+  max-width: 355px
+
+
+@media (max-width: 1200px)
+  .communication
+    max-width: 345px
+  .homework
+    max-width: 275px
+  .time
+    max-width: 305px
+
+@media (max-width: 992px)
+  .advantages
+    &__subtitle
+      max-width: 590px
+      margin: 0 auto 35px
+    &__all-advantages
+      margin: 0 auto 30px
+
+  .all-advantages
+    flex-direction: column
+    max-width: 405px
+    &__communication, &__homework, &__time
+      margin-bottom: 20px
+
+  .communication, .homework, .time
+    max-width: 100%
+
+  .time__img
+    margin-right: 12px
+
+@media (max-width: 576px)
+  .advantages
+    &__title
+      margin-bottom: 25px
+      font-size: 26px
+    &__subtitle
+      font-size: 20px
+    &__img
+      max-width: 320px
+    &__all-advantages
+      margin: 0 auto 10px
+
+  .all-advantages
+    &__communication, &__homework, &__time
+      margin-bottom: 15px
+
+  .communication, .homework, .time
+    &__text
+      font-size: 14px
+
+@media (max-width: 450px)
+  .advantages
+    &__title
+      font-size: 20px
+    &__subtitle
+      margin-bottom: 20px
+      font-size: 16px
+    &__img
+      max-width: 300px
+
+  .communication, .homework, .time
+    &__text
+      font-size: 12px
+      line-height: 16px
+
+@media (max-width: 320px)
+  .advantages
+    &__title
+      font-size: 18px
+    &__subtitle
+      font-size: 14px
+    &__img
+      max-width: 280px
+    &__all-advantages
+      margin: 0 auto 10px
+
+  .all-advantages
+    max-width: 270px
+    &__communication, &__homework, &__time
+      margin-bottom: 0
+
+  .communication, .homework, .time
+    &__img
+      width: 40px
+      object-fit: contain

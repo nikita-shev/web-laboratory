@@ -1,0 +1,167 @@
+//color
+$btn-text: #ffffff
+$btn-bg: #ec568d
+
+$test: #000000
+$full: #ec568d
+
+$price-eu: #3cb6ce
+$price-ru: #363636
+
+.section-tariffs
+  padding: 60px 0
+  background: url('../images/header-bg.jpg') no-repeat center / cover
+
+.tariffs
+  &__title
+    @include style(25px, 30px, 400, $btn-text)
+  &__tariffs-wrap
+    max-width: 720px
+    margin: 0 auto
+  &__tariff-test
+    margin-right: 30px
+
+.tariff-test, .tariff-full
+  width: 360px
+  background: $btn-text
+
+.tariff-test
+
+
+  flex-direction: column
+  justify-content: space-between
+
+
+  border-top: 8px solid $test
+  &__title
+    @include style(0, 28px, 900, $test)
+    margin-top: 15px
+  &__subtitle
+    @include style(15px, 16px, 300, $test)
+    max-width: 95%
+    margin: 0 auto 15px
+    padding-bottom: 10px
+    border-bottom: 1px solid $test
+  &__list
+    padding-left: 45px
+    line-height: 24px
+  &__price
+    &_eu
+      @include style(0, 26px, 900, $price-eu)
+      max-width: 95%
+      margin: auto
+      padding: 15px 0 0
+      border-top: 1px solid $test
+    &_ru
+      @include style(15px, 16px, 900, $price-ru)
+  &__btn
+    display: block
+    margin: 0 auto 30px
+    padding: 16px 60px
+    @include font(16px, 700)
+    border: none
+    color: $btn-text
+    background: $test
+    transition: all 0.7s ease
+    &:hover
+      background: lighten($test, 20)
+
+.tariff-full
+  flex-direction: column
+  justify-content: space-between
+  border-top: 8px solid $full
+  &__title
+    @include style(0, 28px, 900, $full)
+    margin-top: 15px
+  &__subtitle
+    @include style(15px, 16px, 300, $test)
+    max-width: 95%
+    margin: 0 auto 15px
+    padding-bottom: 10px
+    border-bottom: 1px solid $full
+  &__list
+    padding-left: 45px
+    padding-bottom: 15px
+    line-height: 24px
+  &__price
+    &_eu
+      @include style(0, 26px, 900, $price-eu)
+      max-width: 95%
+      margin: auto
+      padding: 15px 0 0
+      border-top: 1px solid $full
+    &_ru
+      @include style(15px, 16px, 900, $price-ru)
+  &__btn
+    display: block
+    margin: 0 auto 30px
+    padding: 16px 60px
+    @include font(16px, 700)
+    border: none
+    color: $btn-text
+    background: $full
+    transition: all 0.7s ease
+    &:hover
+      background: darken($full, 10)
+
+.tariff-list
+  &__item
+    @include font(14px, 300)
+
+@media (max-width: 992px)
+  .tariff-test
+    &__btn
+      &:hover
+        background: $test
+        cursor: auto
+
+  .tariff-full
+    &__btn
+      &:hover
+        background: $btn-bg
+        cursor: auto
+
+@media (max-width: 768px)
+  .tariffs-wrap
+    flex-direction: column
+    align-items: center
+
+  .tariffs
+    &__tariff-test
+      margin-right: 0
+      margin-bottom: 50px
+
+  .tariff-test
+    &__list
+      padding-bottom: 255px
+
+@media (max-width: 576px)
+  .tariffs
+    &__title
+      font-size: 26px
+
+  .tariff-test, .tariff-full
+    width: 300px
+    &__title
+      font-size: 26px
+    &__subtitle
+      font-size: 16px
+    &__price
+      &_eu
+        font-size: 24px
+
+@media (max-width: 450px)
+  .tariffs
+    &__title
+      font-size: 20px
+
+  .tariff-test, .tariff-full
+    &__title
+      font-size: 20px
+    &__subtitle
+      font-size: 14px
+    &__price
+      &_eu
+        font-size: 20px
+      &_ru
+        font-size: 14px

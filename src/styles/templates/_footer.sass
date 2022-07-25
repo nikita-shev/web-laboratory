@@ -1,0 +1,93 @@
+//color
+$text: #ebf8fb
+
+.footer
+  padding: 30px 0
+  background: url('../images/header-bg.jpg') no-repeat center / cover
+  &-nav
+    align-items: center
+    justify-content: space-between
+  &__footer-nav
+    margin-left: 10px
+    margin-right: 10px
+
+  &-menu
+    list-style: none
+    &__item
+      margin-right: 15px
+      &:last-of-type
+        margin-right: 0
+    &__link
+      @include font(14px, 300)
+      border-bottom: 0.5px solid #ffffff
+      text-decoration: none
+      color: $text
+
+  &-contact
+    list-style: none
+    &__item
+      align-items: center
+      margin-right: 15px
+      &:last-of-type
+        margin-right: 0
+    &__img
+      padding-right: 5px
+    &__link
+      @include font(14px, 300)
+      text-decoration: none
+      color: $text
+
+  &__copy
+    margin-top: 25px
+    border-top: 1px solid #ffffff
+
+.inner
+  display: inline-block
+
+.copy
+  @include style(0, 13px, 300, rgba(235, 248, 251, 0.5))
+  padding-top: 25px
+
+
+@media (max-width: 992px)
+  .footer
+    &-nav
+      &__logo
+        max-width: 150px
+    &__footer-nav
+      margin: 0
+    &-menu
+      flex-direction: column
+      &__item
+        margin-right: 0
+        margin-bottom: 5px
+        &:last-of-type
+          margin-bottom: 0
+    &-contact
+      flex-direction: column
+      &__item
+        margin-right: 0
+        margin-bottom: 5px
+        &:last-of-type
+          margin-bottom: 0
+
+@media (max-width: 576px)
+  .footer
+    &-nav
+      justify-content: space-around
+      flex-wrap: wrap
+      &__logo
+        display: block
+        margin: 0 auto
+        padding-bottom: 15px
+
+  .inner
+    display: block
+    width: 100%
+
+@media (max-width: 450px)
+  .footer
+    &-nav
+      &__footer-menu
+        margin-bottom: 25px
+        text-align: center
